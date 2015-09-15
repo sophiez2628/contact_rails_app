@@ -2,10 +2,12 @@
 #
 # Table name: contacts
 #
-#  id      :integer          not null, primary key
-#  name    :string           not null
-#  email   :string           not null
-#  user_id :integer          not null
+#  id        :integer          not null, primary key
+#  name      :string           not null
+#  email     :string           not null
+#  user_id   :integer          not null
+#  favorites :boolean
+#  group_id  :integer
 #
 
 class Contact < ActiveRecord::Base
@@ -26,4 +28,5 @@ class Contact < ActiveRecord::Base
     source: :user
     )
 
+  belongs_to :group
 end

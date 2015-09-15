@@ -4,7 +4,7 @@ user1 = User.create!(username: "Sophie3232")
 user2 = User.create!(username: "Brookemagicpony")
 user3 = User.create!(username: "mickeymousefan")
 
-contact1 = user1.contacts.create!(email: "blahblah@example.com", name: "Mom")
+contact1 = user1.contacts.create!(email: "blahblah@example.com", name: "Mom", favorites: true )
 contact2 = user2.contacts.create!(email: "fanperson@example.com", name: "Ian")
 contact3 = user3.contacts.create!(email: "yetanotheremail@example.com", name: "Minnie Mouse")
 

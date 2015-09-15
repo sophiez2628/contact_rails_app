@@ -32,6 +32,16 @@ class ContactsController < ApplicationController
     render json: @contacts
   end
 
+  def favorite
+    if params.has_key?(:user_id)
+      @contacts = Contact.where(user_id: params[:user_id], favorites: true)
+    else
+      render json: "User not specified."
+    end
+
+    render json: @contacts
+  end
+
   def show
     @contact = Contact.find(params[:id])
     render json: @contact

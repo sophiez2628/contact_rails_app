@@ -27,5 +27,6 @@ class User < ActiveRecord::Base
     source: :contact_shares
   )
 
+  has_many :groups
 
 end

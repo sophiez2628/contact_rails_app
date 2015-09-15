@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  contact_id :integer          not null
 #  user_id    :integer          not null
+#  favorites  :boolean
 #
 
 class ContactShare < ActiveRecord::Base
