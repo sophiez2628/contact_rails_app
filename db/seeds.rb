@@ -11,3 +11,6 @@ contact3 = user3.contacts.create!(email: "yetanotheremail@example.com", name: "M
 contactshare1 = contact1.contact_shares.create!(user_id: user2.id)
 contactshare2 = contact2.contact_shares.create!(user_id: user3.id)
 contactshare3 = contact3.contact_shares.create!(user_id: user1.id)
+
+comment1 = Comment.create!(commentable_id: user1.id, commentable_type: "User", content: "The best user")
+comment2 = Comment.create!(commentable_id: contact2.id, commentable_type: "Contact", content: "Brooke's boyfriend")

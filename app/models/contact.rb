@@ -10,7 +10,7 @@
 
 class Contact < ActiveRecord::Base
   validates :user_id, uniqueness: { scope: :email }
-
+  has_many :comments, :as => :commentable
   belongs_to(
     :owner,
     class_name: "User",
